@@ -16,7 +16,7 @@
     "fakerest": "^1.2.1",
     "fetch-mock": "^5.5.0",
     "gh-pages": "^0.12.0",
-    "react-scripts": "1.0.5"
+    "react-scripts": "1.1.1"
   },
   "dependencies": {
     "admin-on-rest": "~1.2.0",
@@ -30,14 +30,18 @@
     "react-router-dom": "~4.1.0",
     "react-tap-event-plugin": "~2.0.1",
     "redux-form": "~6.6.2",
-    "redux-saga": "~0.14.6"
+    "redux-saga": "~0.14.6",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  "homepage": "http://marmelab.com/admin-on-rest-demo/"
+  "homepage": "http://marmelab.com/admin-on-rest-demo/",
+  "snyk": true
 }
